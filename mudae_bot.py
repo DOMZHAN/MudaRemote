@@ -158,11 +158,6 @@ def run_bot(token, prefix, target_channel_id, roll_command, min_kakera, delay_se
 
         try:
             log_function(f"[{client.muda_name}] Sending initial commands...", preset_name, "INFO")
-            await channel.send(f"{client.mudae_prefix}limroul 1 1 1 1")
-            await asyncio.sleep(1.0)
-            await channel.send(f"{client.mudae_prefix}dk")
-            await asyncio.sleep(1.0)
-            await channel.send(f"{client.mudae_prefix}daily")
             await asyncio.sleep(1.0)
             await check_status(client, channel, client.mudae_prefix) # Use combined status check
         except discord.errors.Forbidden as e:
